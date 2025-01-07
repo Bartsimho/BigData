@@ -1,1 +1,19 @@
-{"image":"mcr.microsoft.com/devcontainers/universal:2"}
+{
+    "name": "My Dev Container",
+    "image": "mcr.microsoft.com/vscode/devcontainers/python:3.12.1",
+    "extensions": [
+        "ms-python.python",                  // Python extension
+        "ms-toolsai.jupyter",                // Jupyter extension
+        "ms-toolsai.jupyter-keymap",         // Jupyter Keymap (optional)
+        "ms-toolsai.jupyter-renderers",      // Jupyter Renderers (optional)
+        "ms-python.vscode-pylance",          // Pylance extension
+        "vscode.json-language-features",      // JSON Language Features
+        "ms-vscode.python-debugger",          // Python Debugger
+        "ms-toolsai.jupyter-ipynb",          // .ipynb Support
+        "ms-toolsai.jupyter-slides",          // Jupyter Slide Show
+        "ms-toolsai.jupyter-cell-tags"        // Jupyter Cell Tags
+    ],
+    "settings": {
+        "python.pythonPath": "/usr/local/bin/python"
+    }
+}
