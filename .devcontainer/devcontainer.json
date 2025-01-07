@@ -1,25 +1,22 @@
 {
-    "name": "Development Container",
-    "image": "ubuntu:20.04",
-    "customizations": {
-      "vscode": {
-        "extensions": [
-          "ms-python.python",
-          "ms-vscode.cpptools",
-          "ms-vscode.csharp",
-          "ms-vscode.powershell",
-          "redhat.java",
-          "donjayamanne.githistory"
-        ]
-      }
-    },
-    "features": {
-      "python": "latest",
-      "git": "latest",
-      "docker-in-docker": "latest"
-    },
-    "postCreateCommand": "sudo apt update && sudo apt install -y $(cat /tmp/packages.txt)",
-    "mounts": [
-      "source=${localEnv:HOME}/.vscode-server,target=/root/.vscode-server,type=bind"
-    ]
+  "name": "Development Container",
+  "image": "ubuntu:20.04",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-vscode.cpptools",
+        "ms-vscode.csharp",
+        "ms-vscode.powershell",
+        "redhat.java",
+        "donjayamanne.githistory",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  },
+  "features": {
+    "python": "3.12",
+    "git": "latest",
+    "docker-in-docker": "latest"
   }
+}
