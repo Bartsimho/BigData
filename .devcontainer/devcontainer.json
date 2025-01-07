@@ -15,8 +15,12 @@
     }
   },
   "features": {
-    "python": "3.12",
+    "python": "latest",
     "git": "latest",
     "docker-in-docker": "latest"
+  },
+  "postCreateCommand": "set -ex; apt update && apt install -y sudo && sudo apt install -y $(cat /tmp/packages.txt) && sudo apt install -y software-properties-common wget && wget https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb &&sudo dpkg -i jdk-21_linux-x64_bin.deb && sudo apt --fix-broken install -y && rm jdk-21_linux-x64_bin.deb",
+  "mounts": [
+    "source=${localEnv:HOME}/.vscode-server,target=/root/.vscode-server,type=bind"
+  ]
   }
-}
