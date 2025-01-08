@@ -43,7 +43,7 @@ RUN apt update && \
 apt install -y software-properties-common && \
 add-apt-repository ppa:deadsnakes/ppa && \
 apt update && \
-apt install -y python3.12 python3.12-venv python3.12-dev && \
+apt install -y python3.12.1 python3.12.1-venv python3.12.1-dev && \
 apt install -y python3-pip &&
 
 # Install dependencies and add Oracle JDK 21.0.5
